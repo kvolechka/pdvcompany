@@ -1,0 +1,450 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+  background: transparent;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button, a {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.about, .services {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100%;
+  padding: 0 100px;
+  position: relative;
+}
+
+.main {
+  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  margin: 0 auto;
+}
+
+.footer {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+
+body {
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 400;
+  font-size: 1.14rem;
+  color: #6B6B6C;
+  overflow-x: hidden;
+  min-width: 320px;
+}
+
+.about {
+  position: relative;
+  padding: 110px 0 173px;
+}
+
+.about__description-box {
+  width: 42.3%;
+  margin-top: clamp(0px, 5.55vw, 80px);
+  margin-right: 25px;
+}
+
+.about__description-title {
+  font-family: "Exo 2";
+  font-weight: 600;
+  font-style: normal;
+  font-size: 3.71rem;
+  line-height: 4.64rem;
+  color: #363738;
+}
+
+.about__description {
+  font-family: "PT Sans";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.14rem;
+  line-height: 1.71rem;
+  color: #6B6B6C;
+  margin-top: 40px;
+}
+
+.about__description-link {
+  font-family: "PT Sans";
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.14rem;
+  line-height: 1.71rem;
+  color: #363738;
+  margin-top: 40px;
+  border-bottom: 3px solid #FFCE50;
+  display: inline-block;
+}
+
+.about__image-box {
+  min-width: 450px;
+  border-radius: 20px 0 20px 20px;
+}
+
+.about__image-box img {
+  max-width: 100%;
+}
+
+.about__background-box {
+  width: 41.6%;
+  height: 100%;
+  background: #0B7572;
+  position: absolute;
+  right: -100px;
+  top: 0;
+  z-index: -1;
+}
+
+.services {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  margin: -106px 0 100px;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  padding: 40px 0 56px;
+}
+
+.services__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: calc(14vw - 121.6px);
+  padding-right: calc(20vw - 166px);
+  border-right: 1px solid #D7D7DD;
+  width: 33.3%;
+}
+
+.services__item:first-of-type {
+  padding-right: clamp(20px, calc(20vw - 183px), 105px);
+}
+
+.services__item:last-of-type {
+  border-right: none;
+}
+
+.services__title {
+  font-family: "Exo 2";
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1.43rem;
+  line-height: 1.72rem;
+  color: #363738;
+  margin-top: 24px;
+}
+
+.services__description {
+  font-family: "PT Sans";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.14rem;
+  line-height: 1.58rem;
+  color: #6B6B6C;
+  margin-top: 16px;
+}
+
+@media (min-width: 1440px) {
+  .about {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+@media (max-width: 1024px) {
+  .wrapper {
+    padding: 0 40px;
+  }
+  .about {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 80px 0 0;
+  }
+  .about__description-box {
+    margin: 0;
+    width: 83%;
+    padding-right: 46px;
+  }
+  .about__description-title {
+    font-family: "Exo 2";
+    font-weight: 600;
+    font-style: normal;
+    font-size: 3.14rem;
+    line-height: 3.6rem;
+    color: #363738;
+  }
+  .about__description {
+    font-family: "PT Sans";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.14rem;
+    line-height: 1.6rem;
+    color: #6B6B6C;
+  }
+  .about__background-box {
+    width: 177px;
+    right: -40px;
+  }
+  .about__image-box {
+    width: 100%;
+    margin-top: 56px;
+    border-radius: 15px 15px 0 15px;
+  }
+  .about__description-link {
+    margin-top: 61px;
+  }
+  .services {
+    padding: 0;
+    margin-top: 40px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .services__item {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 32px 140px 40px 32px;
+    width: 100%;
+    border: none;
+    -webkit-box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.12);
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.12);
+    border-radius: 20px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    margin-top: 16px;
+  }
+  .services__item:first-of-type {
+    margin-top: 0;
+    padding: 32px 140px 40px 32px;
+  }
+  .services__title {
+    margin-top: 0;
+    font-family: "Exo 2";
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.43rem;
+    line-height: 1.57rem;
+    color: #363738;
+  }
+  .services__image {
+    margin-right: 32px;
+  }
+  .services__description {
+    margin-top: 20px;
+    font-family: "PT Sans";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.14rem;
+    line-height: 1.5rem;
+    color: #6B6B6C;
+  }
+}
+
+@media (max-width: 630px) {
+  .wrapper {
+    padding: 0 15px;
+  }
+  .about {
+    padding: 75px 0 180px;
+  }
+  .about__description-title {
+    font-family: "Exo 2";
+    font-weight: 600;
+    font-style: normal;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    color: #FFFF;
+  }
+  .about__description-box {
+    width: 100%;
+    padding-right: 0;
+  }
+  .about__description {
+    font-family: "PT Sans";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.07rem;
+    line-height: 1.5rem;
+    color: #FFFF;
+    margin-top: 32px;
+  }
+  .about__description-text:last-of-type {
+    display: none;
+  }
+  .about__description-link {
+    margin-top: 32px;
+    font-family: "PT Sans";
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.07rem;
+    line-height: 1.7rem;
+    color: #FFFF;
+  }
+  .about__background-box {
+    width: 100%;
+    right: 0;
+    width: calc(100% + 30px);
+    margin: 0 -15px;
+  }
+  .about__image-box {
+    min-width: 290px;
+    margin-top: 40px;
+  }
+  .services {
+    -webkit-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    margin: -125px 0 100px;
+    padding: 24px 0 32px;
+  }
+  .services__item {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    padding: 0 27px 0 32px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 24px;
+  }
+  .services__item:first-of-type {
+    padding: 0 27px 0 32px;
+  }
+  .services__image {
+    width: 68px;
+    height: 68px;
+  }
+  .services__image img {
+    max-width: 100%;
+  }
+  .services__title {
+    margin-top: 16px;
+    font-family: "Exo 2";
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.28rem;
+    line-height: 1.71rem;
+    color: #363738;
+    padding-right: 62px;
+  }
+  .services__description {
+    margin-top: 12px;
+    font-family: "PT Sans";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.07rem;
+    line-height: 1.57rem;
+    color: #6B6B6C;
+  }
+}

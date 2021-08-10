@@ -1,0 +1,268 @@
+@import "_reset";
+@import "_fonts";
+
+$clr_default: #6B6B6C;
+$clr_title: #363738;
+$clr_bg: #0B7572;
+$clr_border: #FFCE50;
+
+%flex-space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin fontz($ff, $fw, $fs, $fz, $lh, $clr) {
+  font-family: $ff;
+  font-weight: $fw;
+  font-style: $fs;
+  font-size: $fz;
+  line-height: $lh;
+  color: $clr;
+}
+
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding: 0 100px;
+  position: relative;
+}
+.main {
+  width: 100%;
+  flex: 1 0 auto;
+  margin: 0 auto;
+}
+.footer {
+  flex: 0 0 auto;
+}
+
+
+body {
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 400;
+  font-size: 1.14rem;
+  color: $clr_default;
+  overflow-x: hidden;
+  min-width: 320px;
+}
+
+.about {
+  position: relative;
+  @extend %flex-space-between;
+  padding: 110px 0 173px;
+  &__description-box {
+    width: 42.3%;
+    margin-top: clamp(0px, 5.55vw, 80px);
+    margin-right: 25px;
+  }
+  &__description-title {
+    @include fontz('Exo 2', 600, normal, 3.71rem, 4.64rem, $clr_title);
+  }
+  &__description {
+    @include fontz('PT Sans', 400, normal, 1.14rem, 1.71rem, $clr_default);
+    margin-top: 40px;
+  }
+  &__description-link {
+    @include fontz('PT Sans', 700, normal, 1.14rem, 1.71rem, $clr_title);
+    margin-top: 40px;
+    border-bottom: 3px solid $clr_border;
+    display: inline-block;
+  }
+  &__image-box {
+    min-width: 450px;
+    border-radius: 20px 0 20px 20px;
+  }
+  &__image-box img {
+    max-width: 100%;
+  }
+  &__background-box {
+    width: 41.6%;
+    height: 100%;
+    background: $clr_bg;
+    position: absolute;
+    right: -100px;
+    top: 0;
+    z-index: -1;
+  }
+}
+
+.services {
+  @extend %flex-space-between;
+  align-items: start;
+  margin: -106px 0 100px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  padding: 40px 0 56px;
+  &__item {
+    display: flex;
+    flex-direction: column;
+    padding-left:calc(14vw - 121.6px);
+    padding-right: calc(20vw - 166px);
+    border-right: 1px solid #D7D7DD;
+    width: 33.3%;
+  }
+  &__item:first-of-type {
+    padding-right: clamp(20px, calc(20vw - 183px), 105px);
+  }
+  &__item:last-of-type {
+    border-right: none;
+  }
+  &__title {
+    @include fontz('Exo 2', 600, normal, 1.43rem, 1.72rem, $clr_title);
+    margin-top: 24px;
+  }
+  &__description {
+    @include fontz('PT Sans', 400, normal, 1.14rem, 1.58rem, $clr_default);
+    margin-top: 16px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .about {
+      justify-content: space-around;
+  }
+}
+
+@media (max-width: 1024px) {
+  .wrapper {
+    padding: 0 40px;
+  }
+  .about {
+    flex-direction: column;
+    padding: 80px 0 0;
+    &__description-box {
+      margin: 0;
+      width: 83%;
+      padding-right: 46px;
+    }
+    &__description-title {
+      @include fontz('Exo 2', 600, normal, 3.14rem, 3.6rem, $clr_title);
+    }
+    &__description {
+      @include fontz('PT Sans', 400, normal, 1.14rem, 1.6rem, $clr_default);
+    }
+    &__background-box {
+      width: 177px;
+      right: -40px;
+    }
+    &__image-box {
+      width: 100%;
+      margin-top: 56px;
+      border-radius: 15px 15px 0 15px;
+    }
+    &__description-link {
+      margin-top: 61px;
+    }
+  }
+  .services {
+    padding: 0;
+    margin-top: 40px;
+    flex-direction: column;
+    box-shadow: none;
+    &__item {
+      flex-direction: row;
+      padding: 32px 140px 40px 32px;
+      width: 100%;
+      border: none;
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.12);
+      border-radius: 20px;
+      align-items: start;
+      margin-top: 16px;
+    }
+    &__item:first-of-type {
+      margin-top: 0;
+      padding: 32px 140px 40px 32px;
+    }
+    &__title {
+      margin-top: 0;
+      @include fontz('Exo 2', 600, normal, 1.43rem, 1.57rem, $clr_title);
+    }
+    &__image {
+      margin-right: 32px;
+    }
+    &__description {
+      margin-top: 20px;
+      @include fontz('PT Sans', 400, normal, 1.14rem, 1.5rem, $clr_default);
+    }
+  }
+}
+
+@media (max-width: 630px) {
+  .wrapper {
+    padding: 0 15px;
+  }
+  .about {
+    padding: 75px 0 180px;
+    &__description-title {
+      @include fontz('Exo 2', 600, normal, 2rem, 2.5rem, #FFFF);
+    }
+    &__description-box {
+      width: 100%;
+      padding-right: 0;
+    }
+    &__description {
+      @include fontz('PT Sans', 400, normal, 1.07rem, 1.5rem, #FFFF);
+      margin-top: 32px;
+    }
+    &__description-text:last-of-type {
+      display: none;
+    }
+    &__description-link {
+      margin-top: 32px;
+      @include fontz('PT Sans', 700, normal, 1.07rem, 1.7rem, #FFFF);
+    }
+    &__background-box {
+      width: 100%;
+      right: 0;
+      width: calc(100% + 30px);
+      margin: 0 -15px;
+    }
+    &__image-box {
+      min-width: 290px;
+      margin-top: 40px;
+    }
+  }
+  .services {
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    margin: -125px 0 100px;
+    padding: 24px 0 32px;
+    &__item {
+      box-shadow: none;
+      padding: 0 27px 0 32px;
+      flex-direction: column;
+      margin-top: 24px;
+    }
+    &__item:first-of-type {
+      padding: 0 27px 0 32px;
+    }
+    &__image {
+      width: 68px;
+      height: 68px;
+    }
+    &__image img {
+      max-width: 100%;
+    }
+    &__title {
+      margin-top: 16px;
+      @include fontz('Exo 2', 600, normal, 1.28rem, 1.71rem, $clr_title);
+      padding-right: 62px;
+    }
+    &__description {
+      margin-top: 12px;
+      @include fontz('PT Sans', 400, normal, 1.07rem, 1.57rem, $clr_default);
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+}
